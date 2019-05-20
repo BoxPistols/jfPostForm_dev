@@ -1,9 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>jsPostForm_dev</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .container {
+      font-size: 2em;
+    }
+  </style>
+</head>
+
 <script type="text/javascript">
   /* パラメータを渡す側 */
   function send() {
     var favorite = "";
 
-    for (i = 1; i <= 4; i++) {
+    for (i = 1; i <= favorite.lengthssss; i++) {
       if (document.form1.elements["favorite" + i].checked) {
         favorite += document.form1.elements["favorite" + i].value + " ";
       }
@@ -35,6 +53,7 @@
       <input type="checkbox" name="favorite2" value="映画鑑賞" />映画鑑賞　
       <input type="checkbox" name="favorite3" value="音楽鑑賞" />音楽鑑賞　
       <input type="checkbox" name="favorite4" value="仕事！" />仕事！
+      <input type="checkbox" name="favorite4" value="仕事！" /> その他
     </p>
     <p>
       <input type="submit" value="送信" />
