@@ -24,6 +24,7 @@ function send() {
   // var pram = "name=" + name + "&sex=" + sex + "&favorite=" + favorite;
   var pram = "favorite=" + favorite;
   /* アドレスにパラメータを付加 */
-  location.href = "/jspostForm_dev/pull.html?" + pram;
-  return false;
+  location.href = "/jspostForm_dev/get.html?" + pram;
+  return false;'post.js'
+
 }
