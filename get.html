@@ -26,22 +26,22 @@
         /* キーと値の連想配列を生成 */
         key[keyName] = keyValue;
       }
-      var name = sex = favorite = "";
+      var favorite = "";
       /* 名前 */
-      if (!key["name"] || key["name"] == "") {
-        name = "匿名希望";
-      } else {
-        /* コード変換 */
-        name = unescape(key["name"]);
-      }
-      /* 性別 */
-
-      if (key["sex"] != "") {
-        sex = unescape(key["sex"]);
-      } else {
-        sex = "性別不明";
-      }
-      /* 興味 */
+      // if (!key["name"] || key["name"] == "") {
+      //   name = "匿名希望";
+      // } else {
+      //   /* コード変換 */
+      //   name = unescape(key["name"]);
+      // }
+      // /* 性別 */
+      //
+      // if (key["sex"] != "") {
+      //   sex = unescape(key["sex"]);
+      // } else {
+      //   sex = "性別不明";
+      // }
+      // /* 興味 */
       if (key["favorite"]) {
         favorite = key["favorite"];
       } else {
