@@ -1,8 +1,13 @@
 const paramResult = document.querySelector(".paramResult");
+const url = location.href;
+const result = document.querySelector('.result');
 
 function myCheck() {
 
-  paramResult.innerHTML = ""
+  location.href;
+
+  paramResult.innerHTML = "";
+  result.innerHTML = "";
 
   var flag = false;
   // elements にはボタンの要素も含まれてしまうため -1 しています
@@ -16,15 +21,21 @@ function myCheck() {
       add.className = 'sample';
       paramResult.appendChild(add);
 
-      add.innerHTML = document.formEx.elements[i].value + "が選択されました。"
+      add.innerHTML = document.formEx.elements[i].value + "が選択されました。<br>" ;
+
+      result.innerHTML = url + document.formEx.elements[i].value;
+
     }
+
+
   }
   if (!flag) {
     console.log("項目が選択されていません。");
   }
+
 }
 
 // const url = location.href;
-// document.querySelector('.result').innerHTML = url + paramResult;
+// document.querySelector('.result').innerHTML = url + paramResult.innerHTML;
 
 // document.querySelector("paramURL").value = url;
