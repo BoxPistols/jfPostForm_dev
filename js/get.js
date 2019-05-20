@@ -1,3 +1,4 @@
+
   /* パラメータを受取る側 */
   function pramWrite() {
     /* アドレスの「?」以降の引数(パラメータ)を取得 */
@@ -18,11 +19,26 @@
       /* キーと値の連想配列を生成 */
       key[keyName] = keyValue;
     }
+    var name = sex = favorite = "";
+    /* 名前 */
+    if (!key["name"] || key["name"] == "") {
+      name = "匿名希望";
+    } else {
+      /* コード変換 */
+      name = unescape(key["name"]);
+    }
+    /* 性別 */
+
+    if (key["sex"] != "") {
+      sex = unescape(key["sex"]);
+    } else {
+      sex = "性別不明";
+    }
     /* 興味 */
     if (key["favorite"]) {
       favorite = key["favorite"];
     } else {
       favorite += "無趣味";
     }
-    document.form1.pram.value = "趣味：" + unescape(favorite) + "\n";
+    document.form1.pram.value = "名前：" + name + "\n" + "性別：" + sex + "\n" + "趣味：" + unescape(favorite) + "\n";
   }
