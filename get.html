@@ -15,12 +15,14 @@
       let pair = pram.split("&");
       let i = temp = "";
       let key = new Array();
+
       for (i = 0; i < pair.length; i++) {
         temp = pair[i].split("=");
         keyName = temp[0];
         keyValue = temp[1];
         key[keyName] = keyValue;
       }
+
       let favorite = "";
       if (key["favorite"]) {
         favorite = key["favorite"];
@@ -32,11 +34,14 @@
 
       const view = document.querySelector('.view');
 
+      for (i = 0; i < pair.length; i++) {
+        let add = document.createElement('div');
+        add.className = 'item';
+        view.appendChild(add);
 
-      let add = document.createElement('div');
-      add.className = 'item';
-      view.appendChild(add);
-      add.innerHTML = unescape(favorite);
+        add.innerHTML = unescape(favorite);
+
+      }
 
     }
   </script>
@@ -46,12 +51,12 @@
 <body onload="pramWrite()">
 
 
-<h3>受け取ったパラメータを表示</h3>
-<div class="view">
-  <div class="item"></div>
-</div>
+  <h3>受け取ったパラメータを表示</h3>
+  <div class="view">
+    <div class="item"></div>
+  </div>
 
-<!--
+  <!--
   <form name="form1" action="#">
     <fieldset>
       <legend>受け取ったパラメータを表示</legend>
