@@ -9,11 +9,11 @@
 
   <script type="text/javascript">
     function pramWrite() {
-      let pram = location.search;
+      const pram = location.search;
       if (!pram) return false;
       pram = pram.substring(1);
-      let pair = pram.split("&");
-      let i = temp = "";
+      const pair = pram.split("&");
+      const i = temp = "";
       let key = new Array();
       for (i = 0; i < pair.length; i++) {
         temp = pair[i].split("=");
@@ -21,18 +21,16 @@
         keyValue = temp[1];
         key[keyName] = keyValue;
       }
-      let favorite = "";
+      const favorite = "";
       if (key["favorite"]) {
         favorite = key["favorite"];
       } else {
         favorite += "Non";
       }
 
-        // document.form1.pram.value = "Item：" + unescape(favorite) + "\n";
-
+      // document.form1.pram.value = "Item：" + unescape(favorite) + "\n";
       const view = document.querySelector('.view .item');
       view.innerHTML = unescape(favorite);
-
 
     }
   </script>
@@ -47,7 +45,7 @@
   <div class="item"></div>
 </div>
 
-<!-- 
+<!--
   <form name="form1" action="#">
     <fieldset>
       <legend>受け取ったパラメータを表示</legend>
