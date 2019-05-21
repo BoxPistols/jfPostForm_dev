@@ -1,7 +1,7 @@
 .container {
   color: #333;
   padding: 20px;
-  background-color: #eee; }
+  background-color: #ccc; }
   .container .row {
     background: #ccc;
     padding: 20px;
@@ -29,3 +29,11 @@ input[type="button"], input[type="submit"] {
 
 .resultArea {
   font-size: 1rem; }
+
+.lay_check-group {
+  display: flex;
+  flex-direction: column; }
+  .lay_check-group .form_group {
+    display: flex; }
+
+/*# sourceMappingURL=style.css.map */
