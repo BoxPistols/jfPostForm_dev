@@ -31,7 +31,7 @@
         // document.form1.pram.value = "Item：" + unescape(favorite) + "\n";
 
       const view = document.querySelector('.view .item');
-      view.innerHTML = document.form1.pram.value;
+      view.innerHTML = unescape(favorite);
 
 
     }
@@ -47,13 +47,14 @@
   <div class="item"></div>
 </div>
 
-
+<!-- 
   <form name="form1" action="#">
     <fieldset>
-      <!-- <legend>受け取ったパラメータを表示</legend> -->
+      <legend>受け取ったパラメータを表示</legend>
       <textarea cols="40" rows="4" name="pram" style="border:0;overflow:visible" readonly="readonly"></textarea>
     </fieldset>
-  </form>
+  </form> -->
+
 </body>
 
 </html>
