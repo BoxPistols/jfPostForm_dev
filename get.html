@@ -29,8 +29,14 @@
       }
 
       // document.form1.pram.value = "Item：" + unescape(favorite) + "\n";
-      const view = document.querySelector('.view .item');
-      view.innerHTML = unescape(favorite);
+
+      const view = document.querySelector('.view');
+
+
+      let add = document.createElement('div');
+      add.className = 'item';
+      view.appendChild(add);
+      add.innerHTML = unescape(favorite);
 
     }
   </script>
