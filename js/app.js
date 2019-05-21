@@ -3,9 +3,7 @@ const url = location.href;
 const result = document.querySelector('.result');
 
 function myCheck() {
-
   location.href;
-
   paramResult.innerHTML = "";
   result.innerHTML = "";
 

@@ -6,6 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>jsPostForm_dev</title>
   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="pramWrite()">
+
+  <h3>受け取ったパラメータを表示</h3>
+  <div class="view"></div>
 
   <script type="text/javascript">
     function pramWrite() {
@@ -30,26 +36,10 @@
         favorite += "Non";
       }
 
-      // document.form1.pram.value = "Item：" + unescape(favorite) + "\n";
-
       const view = document.querySelector('.view');
-
-      let add = document.createElement('div');
-      add.className = 'item';
-      view.appendChild(add);
-
-      add.innerHTML = unescape(favorite);
-
+      view.innerHTML = unescape(favorite);
     }
   </script>
-</head>
-
-
-<body onload="pramWrite()">
-
-  <h3>受け取ったパラメータを表示</h3>
-  <div class="view"></div>
-
 </body>
 
 </html>
