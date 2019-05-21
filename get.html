@@ -34,14 +34,11 @@
 
       const view = document.querySelector('.view');
 
-      for (i = 0; i < pair.length; i++) {
-        let add = document.createElement('div');
-        add.className = 'item';
-        view.appendChild(add);
+      let add = document.createElement('div');
+      add.className = 'item';
+      view.appendChild(add);
 
-        add.innerHTML = unescape(favorite);
-
-      }
+      add.innerHTML = unescape(favorite);
 
     }
   </script>
