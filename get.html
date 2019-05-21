@@ -9,7 +9,7 @@
 
   <script type="text/javascript">
     function pramWrite() {
-      const pram = location.search;
+      let pram = location.search;
       if (!pram) return false;
       pram = pram.substring(1);
       let pair = pram.split("&");
