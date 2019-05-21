@@ -12,8 +12,8 @@
       const pram = location.search;
       if (!pram) return false;
       pram = pram.substring(1);
-      const pair = pram.split("&");
-      const i = temp = "";
+      let pair = pram.split("&");
+      let i = temp = "";
       let key = new Array();
       for (i = 0; i < pair.length; i++) {
         temp = pair[i].split("=");
@@ -21,7 +21,7 @@
         keyValue = temp[1];
         key[keyName] = keyValue;
       }
-      const favorite = "";
+      let favorite = "";
       if (key["favorite"]) {
         favorite = key["favorite"];
       } else {
